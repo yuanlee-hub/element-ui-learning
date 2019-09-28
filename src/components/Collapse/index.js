@@ -1,4 +1,4 @@
-import Collapse from './src/main'
+import Collapse from './src/collapse'
 Collapse.install = function (Vue) {
   Vue.install(Collapse.name, Collapse)
 }

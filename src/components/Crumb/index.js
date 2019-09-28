@@ -1,4 +1,4 @@
-import Crumb from './src/main'
+import Crumb from './src/crumb'
 Crumb.install = function (Vue) {
   Vue.install(Crumb.name, Crumb)
 }

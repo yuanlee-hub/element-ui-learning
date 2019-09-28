@@ -1,4 +1,4 @@
-import CollapseItem from '../collapse/src/item.vue'
+import CollapseItem from '../collapse/src/collapse-item'
 CollapseItem.install = function (Vue) {
   Vue.install(CollapseItem.name, CollapseItem)
 }
