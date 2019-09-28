@@ -5,10 +5,6 @@ Vue.use(Router)
 
 export const routes = [
   {
-    path: '/',
-    redirect: '/collapse'
-  },
-  {
     path: '/alert',
     component: Layout,
     children: [
@@ -26,7 +22,7 @@ export const routes = [
       {
         path: '',
         name: 'PageHeader',
-        component: () => import('../views//pageHeader')
+        component: () => import('../views/page-header')
       }
     ]
   },
@@ -53,24 +49,35 @@ export const routes = [
     ]
   },
   {
-    path: '/Progress',
+    path: '/progress',
     component: Layout,
     children: [
       {
         path: '',
         name: 'Progress',
-        component: () => import('../views/Progress')
+        component: () => import('../views/progress')
       }
     ]
   },
   {
-    path: '/Button',
+    path: '/button',
     component: Layout,
     children: [
       {
         path: '',
         name: 'Button',
-        component: () => import('../views/Button')
+        component: () => import('../views/button')
+      }
+    ]
+  },
+  {
+    path: '/tag',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        name: 'Tag',
+        component: () => import('../views/tag')
       }
     ]
   }

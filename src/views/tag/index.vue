@@ -14,9 +14,9 @@
 </template>
 
 <script>
-import ClComponentName from '@/components/componentName'
+import ClTag from '@/components/tag'
 export default {
   name: 'Component' + 'Demo',
-  components: { ClComponentName }
+  components: { ClTag }
 }
 </script>
