@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+.demo dl {
+    border: 1px solid #000;
+    margin-bottom: 30px;
+}
+.demo dl:last-child {
+    margin-bottom: 0;
+}
+.demo dt {
+    text-indent: 10px;
+    font-weight: bold;
+    line-height: 30px;
+    border-bottom: 1px solid #666;
+    background-color: #a0cfff;
+}
+.demo dd {
+    padding: 10px;
+    border-bottom: 1px solid #666;
+}
+.demo dd:last-child {
+    border-bottom: none;
+}
