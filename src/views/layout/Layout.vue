@@ -1,12 +1,6 @@
 <template>
     <div class="layout">
-        <nav>
-            <ul>
-                <li v-for="name in components" :key="name" :class="{actived:$route.name===name}">
-                  <router-link :to="{name}">{{ name }}</router-link>
-                </li>
-            </ul>
-        </nav>
+        <nav-bar></nav-bar>
 
         <main>
             <h1>{{ $route.name }}</h1>
@@ -16,19 +10,13 @@
 </template>
 
 <script>
+import NavBar from './components/NavBar'
 export default {
   name: 'Layout',
+  components: { NavBar },
   data () {
     return {
-      components: [
-        'Alert',
-        'Crumb',
-        'PageHeader',
-        'Collapse',
-        'Progress',
-        'Button',
-        'Tag'
-      ]
+
     }
   }
 }
@@ -37,20 +25,6 @@ export default {
 <style scoped>
     .layout {
         padding: 30px;
-    }
-    nav {
-        width: 200px;
-        padding: 50px 0 0;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        transition: padding-top .3s;
-    }
-    nav li {
-        line-height: 30px;
-    }
-    nav .actived a {
-        color: #e00;
     }
     main {
         padding-left: 220px;

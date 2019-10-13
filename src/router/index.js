@@ -5,6 +5,17 @@ Vue.use(Router)
 
 export const routes = [
   {
+    path: '/',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        name: 'Index',
+        component: () => import('../views/index')
+      }
+    ]
+  },
+  {
     path: '/alert',
     component: Layout,
     children: [
