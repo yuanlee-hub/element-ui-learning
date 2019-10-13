@@ -16,7 +16,7 @@
 <script>
 import ClComponentName from '@/components/componentName'
 export default {
-  name: 'Component' + 'Demo',
+  name: 'ComponentName' + 'Demo',
   components: { ClComponentName }
 }
 </script>

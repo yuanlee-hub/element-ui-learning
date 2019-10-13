@@ -1,10 +1,10 @@
 <template>
-    <div aria="ComponentName"></div>
+  <div aria="Badge"></div>
 </template>
 
 <script>
 export default {
-  name: 'Cl' + 'ComponentName',
+  name: 'Cl' + 'Badge',
   props: {
 
   },

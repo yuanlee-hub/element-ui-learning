@@ -20,7 +20,8 @@ export default {
         'Collapse',
         'Progress',
         'Button',
-        'Tag'
+        'Tag',
+        'Badge'
       ]
     }
   }

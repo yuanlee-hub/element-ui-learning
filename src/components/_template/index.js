@@ -1,6 +1,6 @@
-import Component from './src/main'
-Component.install = function (Vue) {
-  Vue.install(Component.name, Component)
+import ComponentName from './src/main'
+ComponentName.install = function (Vue) {
+  Vue.install(ComponentName.name, ComponentName)
 }
 
-export default Component
+export default ComponentName

@@ -91,6 +91,17 @@ export const routes = [
         component: () => import('../views/tag')
       }
     ]
+  },
+  {
+    path: '/badge',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        name: 'Badge',
+        component: () => import('../views/badge')
+      }
+    ]
   }
 ]
 
