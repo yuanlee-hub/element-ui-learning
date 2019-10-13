@@ -2,16 +2,8 @@
     <div role="progress"
          aria-min="0"
          aria-max="100"
-         class="el-progress"
          :aria-valuenow="percentage"
-         :class="[
-            'el-progress--'+type,
-            status ? 'is--'+status:'',
-            {
-                'el-progress--without-text': !showText,
-                'el-progress--text-inside': textInside,
-            }
-      ]">
+         :class="classList">
         <div class="el-progress-bar">
             <div class="el-progress-bar__outer" :style="'height:'+strokeWidth+'px'">
                 <div class="el-progress-bar__inner" :style="'width:'+percentage+'%;background-color:'+bgColor"></div>
@@ -79,6 +71,17 @@ export default {
     },
     textContent () {
       return this.format ? this.format(this.percentage) : this.status
+    },
+    classList () {
+      return [
+        'el-progress',
+        `el-progress--${this.type}`,
+        this.status ? `is--${this.status}` : '',
+        {
+          'el-progress--without-text': !this.showText,
+          'el-progress--text-inside': this.textInside
+        }
+      ]
     }
   },
   methods: {

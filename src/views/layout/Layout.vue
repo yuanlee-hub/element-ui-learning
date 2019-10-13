@@ -26,7 +26,8 @@ export default {
         'PageHeader',
         'Collapse',
         'Progress',
-        'Button'
+        'Button',
+        'Tag'
       ]
     }
   }

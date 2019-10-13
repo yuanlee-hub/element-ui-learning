@@ -1,18 +1,7 @@
 <template>
     <div
-            class="el-button"
             :type="nativeType"
-            :class="[
-                    'el-button--' + this.type,
-                    buttonSize ? 'el-button--' + buttonSize : '',
-                    {
-                        'is-plain': this.plain,
-                        'is-round': this.round,
-                        'is-circle': this.circle,
-                        'is-disabled': this.disabled,
-                        'is-loading': this.loading
-                    }
-            ]"
+            :class="classList"
             :disabled="buttonDisabled"
             :autofocus="autofocus"
             @click="handleClick"
@@ -63,6 +52,20 @@ export default {
     },
     buttonDisabled () {
       return this.disabled || this.clForm.disabled
+    },
+    classList () {
+      return [
+        'el-button',
+        `el-button--${this.type}`,
+        this.buttonSize ? `el-button--${this.buttonSize}` : '',
+        {
+          'is-plain': this.plain,
+          'is-round': this.round,
+          'is-circle': this.circle,
+          'is-disabled': this.disabled,
+          'is-loading': this.loading
+        }
+      ]
     }
   },
   methods: {

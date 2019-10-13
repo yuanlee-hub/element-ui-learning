@@ -1,6 +1,6 @@
 <template>
     <transition name="el-alert-fade">
-        <div role="alert" class="el-alert" :class="['el-alert--'+type, 'is-'+effect, {'is-center':center}]" v-if="visible">
+        <div role="alert" :class="classList" v-if="visible">
             <i v-if="showIcon" class="el-alert__icon" :class="['el-icon-'+type, isBig]"></i>
             <div class="el-alert_content">
             <span class="el-alert__title is-bold" v-if="$slots.title || title">
@@ -40,6 +40,14 @@ export default {
   computed: {
     isBig () {
       return (this.showIcon && (this.title && (this.desc || this.$slots.default))) ? 'is-big' : ''
+    },
+    classList () {
+      return [
+        'el-alert',
+        `el-alert--${this.type}`,
+        `is-${this.effect}`,
+        this.center && 'is-center'
+      ]
     }
   },
   methods: {
