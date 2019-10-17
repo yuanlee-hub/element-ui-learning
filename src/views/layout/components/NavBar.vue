@@ -21,7 +21,8 @@ export default {
         'Progress',
         'Button',
         'Tag',
-        'Badge'
+        'Badge',
+        'Calendar'
       ]
     }
   }

@@ -1,6 +1,4 @@
-# webpack-init
-
-> A Vue.js project
+# ElementUI Component Learning
 
 ## Build Setup
 

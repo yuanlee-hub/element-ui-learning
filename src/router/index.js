@@ -102,6 +102,17 @@ export const routes = [
         component: () => import('../views/badge')
       }
     ]
+  },
+  {
+    path: '/calendar',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        name: 'Calendar',
+        component: () => import('../views/calendar')
+      }
+    ]
   }
 ]
 
