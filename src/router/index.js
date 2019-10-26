@@ -124,6 +124,17 @@ export const routes = [
         component: () => import('../views/tabs')
       }
     ]
+  },
+  {
+    path: '/message',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        name: 'Message',
+        component: () => import('../views/message')
+      }
+    ]
   }
 ]
 

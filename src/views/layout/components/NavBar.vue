@@ -23,7 +23,8 @@ export default {
         'Tag',
         'Badge',
         'Calendar',
-        'Tabs'
+        'Tabs',
+        'Message'
       ].sort()
     }
   }
