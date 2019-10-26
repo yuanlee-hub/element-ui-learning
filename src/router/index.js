@@ -113,6 +113,17 @@ export const routes = [
         component: () => import('../views/calendar')
       }
     ]
+  },
+  {
+    path: '/tabs',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        name: 'Tabs',
+        component: () => import('../views/tabs')
+      }
+    ]
   }
 ]
 

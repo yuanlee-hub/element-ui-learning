@@ -22,8 +22,9 @@ export default {
         'Button',
         'Tag',
         'Badge',
-        'Calendar'
-      ]
+        'Calendar',
+        'Tabs'
+      ].sort()
     }
   }
 }

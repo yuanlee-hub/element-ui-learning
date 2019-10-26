@@ -53,9 +53,9 @@ export default {
   render (h) {
     const tagEl = (
       <span
-        class = { this.classList } style = {{ backgroundColor:this.color }} on-click = { this.handleClick }>
-        { this.$slots.default }
-        { this.closable && <i class="el-tag__close el-icon-close" on-click = { this.handleClose }></i> }
+        class={this.classList} style={{backgroundColor: this.color}} on-click={this.handleClick}>
+        {this.$slots.default}
+        {this.closable && <i class="el-tag__close el-icon-close" on-click={this.handleClose}></i>}
       </span>
     )
     return this.disableTransitions ? tagEl : <transition name="el-zoom-center">{ tagEl }</transition>
