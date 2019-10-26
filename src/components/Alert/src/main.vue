@@ -17,10 +17,16 @@
 </template>
 
 <script>
+import { default as validateAlertType, ALERT_TYPES } from '@/utils/validateAlertType'
+
 export default {
   name: 'ClAlert',
   props: {
-    type: {type: String, default: 'info'},
+    type: {
+      type: String,
+      default: ALERT_TYPES.INFO,
+      validator: validateAlertType
+    },
     effect: {type: String, default: 'light'},
     title: String,
     desc: String,
@@ -44,7 +50,9 @@ export default {
     classList () {
       return [
         'el-alert',
-        `el-alert--${this.type}`,
+        {
+          [`el-alert--${this.type}`]: validateAlertType(this.type)
+        },
         `is-${this.effect}`,
         this.center && 'is-center'
       ]

@@ -22,10 +22,12 @@
                 <dl>
                     <dt>Type</dt>
                     <dd>
+                        <cl-alert>默认Type</cl-alert>
                         <cl-alert type="info">info</cl-alert>
                         <cl-alert type="success">success</cl-alert>
                         <cl-alert type="warning">warning</cl-alert>
                         <cl-alert type="error">error</cl-alert>
+                        <cl-alert type="非法Type">非法Type</cl-alert>
                     </dd>
                 </dl>
 
