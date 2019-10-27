@@ -24,7 +24,7 @@ export default {
   props: {
     type: {
       type: String,
-      default: ALERT_TYPES.INFO,
+      default: ALERT_TYPES.info,
       validator: validateAlertType
     },
     effect: {type: String, default: 'light'},
